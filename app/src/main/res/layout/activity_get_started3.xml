@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".startup.GetStarted3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CITY BUS"
+            android:textSize="40dp"
+            android:layout_marginTop="90dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="70dp"
+            >
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:src=""
+            android:layout_marginBottom="60dp"
+            >
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any Text Here"
+            android:textSize="30dp"
+            android:layout_marginBottom="30dp"
+            >
+
+        </TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any Text Here"
+            android:textSize="30dp"
+            >
+
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Get Started">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:src="">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
