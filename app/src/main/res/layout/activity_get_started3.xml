@@ -31,7 +31,7 @@
         <ImageView
             android:layout_width="300dp"
             android:layout_height="150dp"
-            android:src=""
+            android:src="@drawable/ic_launcher_background"
             android:layout_marginBottom="60dp"
             >
 
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="190dp"
-                android:src="">
+                android:src="@drawable/ic_launcher_background">
 
             </ImageView>
 

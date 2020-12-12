@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:src="">
+        android:src="@drawable/ic_launcher_background">
 
     </ImageView>
 
@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Any Text Here"
+            android:layout_marginTop="40dp"
             android:textSize="30dp"
             android:textStyle="bold">
 
@@ -49,7 +50,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
         >
@@ -57,22 +58,22 @@
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src=""
-            android:layout_marginRight="25dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginRight="2dp"
             >
 
         </com.mikhaellopez.circularimageview.CircularImageView>
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginRight="25dp"
-            android:src="">
+            android:layout_marginRight="2dp"
+            android:src="@drawable/ic_launcher_background">
 
         </com.mikhaellopez.circularimageview.CircularImageView>
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="">
+            android:src="@drawable/ic_launcher_background">
 
         </com.mikhaellopez.circularimageview.CircularImageView>
 

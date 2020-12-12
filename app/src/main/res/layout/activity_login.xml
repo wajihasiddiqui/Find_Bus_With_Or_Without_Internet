@@ -13,7 +13,7 @@
         android:layout_height="150dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:src=""
+        android:src="@drawable/ic_launcher_background"
         >
     </ImageView>
 
@@ -113,7 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="80dp"
-        android:src="">
+        android:src="@drawable/ic_launcher_background">
 
     </com.mikhaellopez.circularimageview.CircularImageView>
 
@@ -121,7 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:src="">
+        android:src="@drawable/ic_launcher_background">
 
     </com.mikhaellopez.circularimageview.CircularImageView>
 
@@ -129,7 +129,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:src="">
+        android:src="@drawable/ic_launcher_background">
 
     </com.mikhaellopez.circularimageview.CircularImageView>
 
@@ -153,7 +153,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="330dp"
         android:layout_marginTop="5dp"
-        android:src="">
+        android:src="@drawable/ic_launcher_background">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 

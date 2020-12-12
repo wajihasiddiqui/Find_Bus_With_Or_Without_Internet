@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    >
+
+    <ImageView
+        android:id="@+id/bus_routes_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_background"
+        >
+
+    </ImageView>
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="80dp">
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            >
+
+
+            <TextView
+                android:id="@+id/bus_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus No"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/route_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Route Name"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="85dp"
+            >
+
+            <TextView
+                android:id="@+id/time"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Travel  15 min"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginBottom="5dp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance   15 km"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

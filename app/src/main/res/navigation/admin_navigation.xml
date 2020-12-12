@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_navigation"
+    app:startDestination="@+id/nav_home_admin">
+
+    <fragment
+        android:id="@+id/nav_home_admin"
+        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.home.AdminHomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_admin_home" />
+
+    <fragment
+        android:id="@+id/nav_addBus"
+        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addbus.BusAddFragment"
+        android:label="add bus"
+        tools:layout="@layout/bus_add_fragment" />
+
+    <fragment
+        android:id="@+id/nav_addBusStops"
+        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addroute.RouteAddFragment"
+        android:label="add route"
+        tools:layout="@layout/route_add_fragment" />
+
+</navigation>
