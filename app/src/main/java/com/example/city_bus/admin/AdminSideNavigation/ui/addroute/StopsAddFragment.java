@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.city_bus.R;
 
-public class RouteAddFragment extends Fragment {
+public class StopsAddFragment extends Fragment {
 
 
     @Override

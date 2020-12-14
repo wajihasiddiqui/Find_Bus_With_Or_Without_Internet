@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".admin.AdminSideNavigation.ui.addroute.RouteAddFragment">
+    tools:context=".admin.AdminSideNavigation.ui.addroute.StopsAddFragment">
 
 
     <ScrollView
@@ -17,67 +17,132 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
-            >
+            android:gravity="center">
 
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:text="Bus No"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD STOPS"
+                android:textStyle="bold"
+                android:textSize="30dp"
                 >
 
-            </EditText>
-
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Route Name"
-                >
-
-            </EditText>
-
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                >
-
-            </EditText>
+            </TextView>
 
 
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/busNo"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:hint="Bus No"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
 
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
-            </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                >
 
-            </EditText>
 
-            <EditText
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/startLocation"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:hint="Start Location"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/endLocation"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:hint="End Location"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/routeName"
+                android:layout_width="330dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="70dp"
+                android:hint="Route Name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/time"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:hint="Time"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/distance"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:hint="Distance"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/adddBus"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_launcher_background">
+
+            </com.mikhaellopez.circularimageview.CircularImageView>
 
 
 

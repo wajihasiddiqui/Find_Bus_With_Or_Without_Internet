@@ -30,7 +30,7 @@ public class BlankFragment extends Fragment {
 
 
 
-        EditText bus_no = (EditText)view.findViewById(R.id.busNo);
+        //EditText bus_no = (EditText)view.findViewById(R.id.busNo);
 
 
           //BusDatabase = new BusesDatabase(this);
