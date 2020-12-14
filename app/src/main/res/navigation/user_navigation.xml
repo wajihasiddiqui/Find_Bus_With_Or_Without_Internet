@@ -11,5 +11,11 @@
         android:label="home"
         tools:layout="@layout/fragment_user_home" />
 
+    <fragment
+        android:id="@+id/nav_showAllRoutes_user"
+        android:name="com.example.city_bus.user.UserSideNavigation.ui.showAllRoutes.ShowAllRoutesFgment"
+        android:label="home"
+        tools:layout="@layout/fragment_show_all_routes_fgment" />
+
 
 </navigation>

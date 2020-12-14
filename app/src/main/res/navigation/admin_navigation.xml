@@ -8,19 +8,19 @@
     <fragment
         android:id="@+id/nav_home_admin"
         android:name="com.example.city_bus.admin.AdminSideNavigation.ui.home.AdminHomeFragment"
-        android:label="home"
-        tools:layout="@layout/fragment_admin_home" />
+        android:label="CITY BUS"
+        tools:layout="@layout/fragment_admin_home"/>
 
     <fragment
         android:id="@+id/nav_addBus"
-        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addbus.BusAddFragment"
-        android:label="add bus"
-        tools:layout="@layout/bus_add_fragment" />
+        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addbus.BlankFragment"
+        android:label="ADD BUS"
+        tools:layout="@layout/fragment_blank" />
 
     <fragment
         android:id="@+id/nav_addBusStops"
         android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addroute.RouteAddFragment"
-        android:label="add route"
+        android:label="ADD STOPS"
         tools:layout="@layout/route_add_fragment" />
 
 </navigation>

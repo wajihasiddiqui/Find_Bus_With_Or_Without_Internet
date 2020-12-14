@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.AdminSideNavigation.ui.addbus.BusAddFragment">
-
+    tools:context=".admin.AdminSideNavigation.ui.addbus.BlankFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,53 +12,66 @@
         android:gravity="center"        >
 
         <EditText
+            android:id="@+id/busNo"
             android:layout_width="310dp"
             android:layout_height="50dp"
+            android:hint="Bus number"
             >
 
         </EditText>
 
         <EditText
+            android:id="@+id/startLocation"
             android:layout_width="310dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
+            android:hint="Start Location"
             >
 
         </EditText>
 
         <EditText
+            android:id="@+id/endLocation"
             android:layout_width="310dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
+            android:hint="End Location"
             >
 
         </EditText>
 
         <EditText
+            android:id="@+id/routeName"
             android:layout_width="310dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
+            android:hint="Route Name"
             >
 
         </EditText>
 
         <EditText
+            android:id="@+id/time"
             android:layout_width="310dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
+            android:hint="Time"
             >
 
         </EditText>
 
         <EditText
+            android:id="@+id/distance"
             android:layout_width="310dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
+            android:hint="Distance"
             >
 
         </EditText>
 
         <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/adddBus"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="40dp"
@@ -70,5 +82,6 @@
 
 
     </LinearLayout>
+
 
 </FrameLayout>

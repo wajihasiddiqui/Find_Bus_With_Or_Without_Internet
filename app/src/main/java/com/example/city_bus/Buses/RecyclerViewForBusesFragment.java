@@ -1,4 +1,4 @@
-package com.example.city_bus.searchResult;
+package com.example.city_bus.Buses;
 
 import android.os.Bundle;
 
@@ -11,30 +11,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.city_bus.R;
-import com.example.city_bus.model.searchBusResultlist;
 
-import java.util.ArrayList;
-import java.util.List;
+public class RecyclerViewForBusesFragment extends Fragment {
 
-public class SearchBusResultFragment extends Fragment {
 
+    RecyclerView recyclerview;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_search_bus_result, container, false);
+        View view =inflater.inflate(R.layout.fragment_recycler_view_for_buses, container, false);
+
 
         RecyclerView recyclerview = view.findViewById(R.id.recyclerview);
         recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        List<searchBusResultlist> list = new ArrayList<>();
 
-        list.add(new searchBusResultlist("M7","15 min","45km","Via Shah Faisal","https://tse3.mm.bing.net/th?id=OIP.Xa_FUFxWwz48najD3i5uCAHaFY&pid=Api&P=0&w=254&h=185"));
-
-
-//        recyclerview.setAdapter(new searchBusResultlist(list,getContext()));
-
+        //  YAha pa sqlite sa data  lana ha
 
         return view;
 
