@@ -15,10 +15,12 @@
 
     </ImageView>
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         >
 
@@ -26,7 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Any Text Here"
-            android:layout_marginTop="40dp"
             android:textSize="30dp"
             android:textStyle="bold">
 
@@ -50,7 +51,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="120dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
         >
@@ -59,20 +60,23 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/ic_launcher_background"
-            android:layout_marginRight="2dp"
+            android:layout_marginRight="8dp"
+            android:onClick="one"
             >
 
         </com.mikhaellopez.circularimageview.CircularImageView>
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginRight="2dp"
+            android:layout_marginRight="8dp"
+            android:onClick="two"
             android:src="@drawable/ic_launcher_background">
 
         </com.mikhaellopez.circularimageview.CircularImageView>
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:onClick="three"
             android:src="@drawable/ic_launcher_background">
 
         </com.mikhaellopez.circularimageview.CircularImageView>
@@ -82,7 +86,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:gravity="center_vertical"
@@ -91,21 +96,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:text="NEXT">
+            android:layout_marginStart="35dp"
+            android:text="SKIP"
+            android:clickable="true"
+            android:onClick="skip"
+            >
 
         </TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="230dp"
-            android:text="CONTINUE">
+            android:layout_marginStart="250dp"
+            android:text="CONTINUE"
+            android:clickable="true"
+            android:onClick="cont"
+            >
 
         </TextView>
 
 
     </LinearLayout>
-
 
 </LinearLayout>

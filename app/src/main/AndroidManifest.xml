@@ -9,33 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.City_bus">
-        <activity android:name=".admin.AdminSideNavigation.ui.addbus.AddBusActivity"></activity>
+        <activity android:name=".Buses.FatchBusDataActivity"></activity>
         <activity
             android:name=".admin.AdminSideNavigation.AdminSideNavigationActivity"
             android:label="Admin Screen"
             android:theme="@style/Theme.City_bus.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".SideNavigation.SideNavigationActivity"
             android:label="@string/title_activity_side_navigation"
-            android:theme="@style/Theme.City_bus.NoActionBar">
-
-
-
-        </activity>
+            android:theme="@style/Theme.City_bus.NoActionBar" />
         <activity
             android:name=".user.UserSideNavigation.UserSideNavigationActivity"
             android:label="@string/title_activity_side_navigation"
-            android:theme="@style/Theme.City_bus.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.City_bus.NoActionBar" />
         <activity android:name=".login.PasswordSuccessfullySetActivity" />
         <activity android:name=".login.ResetPasswordActivity" />
         <activity android:name=".login.ForgetPasswordActivity" />
@@ -43,7 +35,7 @@
         <activity android:name=".startup.GetStarted3" />
         <activity android:name=".startup.GetStarted2" />
         <activity android:name=".startup.GetStarted1" />
-        <activity android:name=".startup.Splash_Screen"></activity>
+        <activity android:name=".startup.Splash_Screen" />
         <activity android:name=".MainActivity" />
     </application>
 

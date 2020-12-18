@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:text="Bus Stops Near You">
 
     </TextView>
@@ -28,6 +28,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
+        android:text="Where to ?"
         >
 
     </EditText>

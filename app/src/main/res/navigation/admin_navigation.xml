@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_addBus"
-        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addbus.BlankFragment"
+        android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addbus.BusAddFragment"
         android:label="ADD BUS"
-        tools:layout="@layout/fragment_blank" />
+        tools:layout="@layout/fragment_bus_add" />
 
     <fragment
         android:id="@+id/nav_addBusStops"

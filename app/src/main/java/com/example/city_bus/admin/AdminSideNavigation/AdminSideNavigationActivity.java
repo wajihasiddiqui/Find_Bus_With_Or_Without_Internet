@@ -1,6 +1,7 @@
 package com.example.city_bus.admin.AdminSideNavigation;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -43,4 +44,5 @@ public class AdminSideNavigationActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfigurationa)
                 || super.onSupportNavigateUp();
     }
+
 }

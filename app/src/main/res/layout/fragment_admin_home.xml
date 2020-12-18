@@ -50,9 +50,10 @@
         >
 
         <Button
+            android:id="@+id/showbus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Buses"
+            android:text="Show Buses"
             >
 
         </Button>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".admin.AdminSideNavigation.ui.addbus.AddBusActivity">
+    tools:context=".admin.AdminSideNavigation.ui.addbus.BusAddFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -134,7 +132,9 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="40dp"
-            android:src="@drawable/ic_launcher_background">
+            android:tint="@color/black"
+            android:src="@drawable/ic_baseline_check_24"
+            >
 
         </com.mikhaellopez.circularimageview.CircularImageView>
 
@@ -143,4 +143,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</FrameLayout>

@@ -1,4 +1,4 @@
-package com.example.city_bus.adapter;
+package com.example.city_bus.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class BusesDatabase extends SQLiteOpenHelper {
-
 
     //   Create Database
 
@@ -23,14 +22,15 @@ public class BusesDatabase extends SQLiteOpenHelper {
 
         String create = "CREATE TABLE Buses(BUS_ID INTEGER PRIMARY KEY AUTOINCREMENT, BUS_NO INTEGER, BUS_STARTLOCATION TEXT, BUS_ENDLOCATION TEXT, BUS_TIME INTEGER, BUS_DISTANCE TEXT, BUS_ROUTENAME TEXT)";
         db.execSQL(create);
+        String create2 = "CREATE TABLE Places(PLACE_ID INTEGER PRIMARY KEY AUTOINCREMENT, PLACE TEXT)";
+        db.execSQL(create2);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-
-
 
     public boolean InsertData(int bus_no, String bus_startlocations, String bus_endlocation, int bus_time, String bus_distance, String bus_routename){
 
@@ -52,11 +52,40 @@ public class BusesDatabase extends SQLiteOpenHelper {
 
     }
 
+
     public Cursor GetAllData(){
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cur = db.rawQuery("SELECT * FROM Buses", null);
         return cur;
+    }
+
+
+
+    public boolean InsertPlace(String Place){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValue = new ContentValues();
+        contentValue.put("PLACE_ID", (Integer) null);
+        contentValue.put("PLACE",Place);
+        long result = db.insert("Places",null,contentValue);
+        if(result == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+
+    }
+
+
+
+    public Cursor GetAllDataPlace(){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cur = db.rawQuery("SELECT * FROM Places", null);
+        return cur;
+
     }
 
 }

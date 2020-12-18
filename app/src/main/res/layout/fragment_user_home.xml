@@ -23,19 +23,37 @@
         android:textSize="25dp">
     </TextView>
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/start_location"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:hint="Bus No"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    </EditText>
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-    </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/end_location"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:hint="Bus No"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
