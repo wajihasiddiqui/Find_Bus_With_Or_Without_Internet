@@ -61,9 +61,10 @@
 
 
         <Button
+            android:id="@+id/showplace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Stos"
+            android:text="Add Place"
             android:layout_marginStart="30dp"
             >
 

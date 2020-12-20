@@ -85,9 +85,19 @@
                     android:id="@+id/adtime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="15 min"
+                    android:text="15"
                     android:textSize="16dp"
                     android:layout_marginStart="10dp"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="min"
+                    android:textSize="16dp"
+                    android:layout_marginStart="4dp"
                     >
 
                 </TextView>
@@ -127,9 +137,19 @@
                     android:id="@+id/addistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="15 Km"
+                    android:text="15"
                     android:textSize="16dp"
                     android:layout_marginStart="38dp"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km"
+                    android:textSize="16dp"
+                    android:layout_marginStart="4dp"
                     >
 
                 </TextView>

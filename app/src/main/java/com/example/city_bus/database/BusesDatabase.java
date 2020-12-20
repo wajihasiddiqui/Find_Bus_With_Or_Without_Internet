@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BusesDatabase extends SQLiteOpenHelper {
 
     //   Create Database
@@ -54,7 +57,6 @@ public class BusesDatabase extends SQLiteOpenHelper {
 
 
     public Cursor GetAllData(){
-
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cur = db.rawQuery("SELECT * FROM Buses", null);
         return cur;
@@ -66,7 +68,6 @@ public class BusesDatabase extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValue = new ContentValues();
-        contentValue.put("PLACE_ID", (Integer) null);
         contentValue.put("PLACE",Place);
         long result = db.insert("Places",null,contentValue);
         if(result == -1){
@@ -85,6 +86,26 @@ public class BusesDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cur = db.rawQuery("SELECT * FROM Places", null);
         return cur;
+
+    }
+
+
+    public List<String> getAllPlaces() {
+        List<String> list = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM Places", null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                list.add(cursor.getString(1));//adding 2nd column data
+
+            }
+            while (cursor.moveToNext());
+        }
+
+        return list;
 
     }
 

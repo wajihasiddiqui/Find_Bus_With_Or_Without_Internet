@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.City_bus">
-        <activity android:name=".Buses.FatchBusDataActivity"></activity>
+        <activity android:name=".FatchData.FatchPlacesActivity"></activity>
+        <activity android:name=".FatchData.FatchBusDataActivity" />
         <activity
             android:name=".admin.AdminSideNavigation.AdminSideNavigationActivity"
             android:label="Admin Screen"

@@ -1,4 +1,4 @@
-package com.example.city_bus.Buses;
+package com.example.city_bus.FatchData;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,7 +23,6 @@ public class FatchBusDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fatch_bus_data);
-
 
 
 

@@ -20,5 +20,10 @@
                     android:icon="@drawable/ic_menu_camera"
                     android:title="Add Bus Stops" />
 
+                <item
+                    android:id="@+id/nav_addPlace"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Add Place" />
+
     </group>
 </menu>

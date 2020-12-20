@@ -10,7 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.city_bus.Buses.FatchBusDataActivity;
+import com.example.city_bus.FatchData.FatchBusDataActivity;
+import com.example.city_bus.FatchData.FatchPlacesActivity;
 import com.example.city_bus.R;
 
 
@@ -27,12 +28,25 @@ public class AdminHomeFragment extends Fragment {
 
         Button showbus = (Button) view.findViewById(R.id.showbus);
 
+        Button showplace = (Button) view.findViewById(R.id.showplace);
+
         showbus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
                 startActivity(new Intent(getActivity(), FatchBusDataActivity.class));
+
+            }
+        });
+
+
+        showplace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                startActivity(new Intent(getActivity(), FatchPlacesActivity.class));
 
             }
         });
