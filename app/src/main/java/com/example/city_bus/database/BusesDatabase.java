@@ -84,7 +84,7 @@ public class BusesDatabase extends SQLiteOpenHelper {
     public Cursor GetAllDataPlace(){
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cur = db.rawQuery("SELECT * FROM Places", null);
+         Cursor cur = db.rawQuery("SELECT * FROM Places", null);
         return cur;
 
     }
@@ -94,7 +94,7 @@ public class BusesDatabase extends SQLiteOpenHelper {
         List<String> list = new ArrayList<>();
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM Places", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM Buses", null);
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
