@@ -62,8 +62,6 @@ public class BusesDatabase extends SQLiteOpenHelper {
         return cur;
     }
 
-
-
     public boolean InsertPlace(String Place){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -79,12 +77,10 @@ public class BusesDatabase extends SQLiteOpenHelper {
 
     }
 
-
-
     public Cursor GetAllDataPlace(){
 
         SQLiteDatabase db = this.getReadableDatabase();
-         Cursor cur = db.rawQuery("SELECT * FROM Places", null);
+        Cursor cur = db.rawQuery("SELECT * FROM Places", null);
         return cur;
 
     }

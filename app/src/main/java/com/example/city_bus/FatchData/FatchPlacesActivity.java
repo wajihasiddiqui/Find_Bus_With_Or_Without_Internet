@@ -8,10 +8,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 
 import com.example.city_bus.R;
-import com.example.city_bus.adapter.busadapter;
 import com.example.city_bus.adapter.placeadapter;
 import com.example.city_bus.database.BusesDatabase;
-import com.example.city_bus.model.Buses;
 import com.example.city_bus.model.Places;
 
 import java.util.ArrayList;
