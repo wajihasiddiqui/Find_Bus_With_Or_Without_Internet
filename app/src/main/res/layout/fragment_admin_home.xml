@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="390dp"
         >
 
         <ImageView
@@ -19,24 +19,17 @@
 
         </ImageView>
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="30dp"
-            >
-
-        </ImageView>
-
     </RelativeLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="234dp"
         android:layout_height="wrap_content"
-        android:text="City Bus"
-        android:textSize="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bangersregular"
+        android:text="City Bus"
+        android:textColor="@android:color/black"
+        android:textSize="70dp"
         android:textStyle="bold">
 
     </TextView>
@@ -54,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Show Buses"
+
             >
 
         </Button>

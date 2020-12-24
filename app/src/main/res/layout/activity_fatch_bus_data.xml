@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#28363D"
     tools:context=".FatchData.FatchBusDataActivity">
 
     <TextView
@@ -12,10 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LIST Of BUSES"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="55dp"
+        android:fontFamily="@font/bangersregular"
         android:layout_marginTop="20dp"
-        android:textSize="35dp"
-        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:textSize="40dp"
         >
 
     </TextView>

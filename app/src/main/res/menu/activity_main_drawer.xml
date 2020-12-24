@@ -8,17 +8,21 @@
                 <item
                     android:id="@+id/nav_home"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="Home" />
+                    android:title="Home"
+
+                    />
                 <item
                     android:id="@+id/nav_search"
                     android:icon="@drawable/ic_menu_slideshow"
+
                     android:title="Classic Search" />
 
 
                 <item
                     android:id="@+id/nav_help"
                     android:icon="@drawable/ic_menu_camera"
-                    android:title="Help And Support" />
+                    android:title="Help And Support"
+                   />
         <item
             android:title="PROFILE"
             >
@@ -26,11 +30,13 @@
                 <item
                     android:id="@+id/nav_login"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="Login" />
+                    android:title="Login"
+                  />
                 <item
                     android:id="@+id/nav_profile"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Profile" />
+                    android:title="Profile"
+                   />
 
 
             </menu>
@@ -38,25 +44,30 @@
 
         <item
             android:title="Home"
+
             >
             <menu>
                 <item
                     android:id="@+id/nav_call"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="Call City Bus Support" />
+                    android:title="Call City Bus Support"
+                   />
                 <item
                     android:id="@+id/nav_invitefriend"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Invite a Friends" />
+                    android:title="Invite a Friends"
+                   />
                 <item
                     android:id="@+id/nav_faq"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="FAQ" />
+                    android:title="FAQ"
+                  />
                 <item
                     android:id="@+id/nav_logout"
                     android:icon="@drawable/ic_menu_gallery"
                     android:onClick="logout"
-                    android:title="Login" />
+                    android:title="Login"
+                    />
 
             </menu>
         </item>

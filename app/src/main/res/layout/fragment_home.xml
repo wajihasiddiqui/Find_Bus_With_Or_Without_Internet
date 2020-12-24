@@ -5,6 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
+    android:background="#28363D"
 tools:context=".SideNavigation.ui.home.HomeFragment">
 
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,32 +18,37 @@ tools:context=".SideNavigation.ui.home.HomeFragment">
     />
 
 
-        <EditText
-            android:layout_width="330dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            android:paddingStart="15dp"
-            android:hint="Where to ?"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/ic_baseline_add_24"
-            android:paddingEnd="30dp"
-            android:background="@drawable/border"
-            >
-        </EditText>
+
+    <Button
+        android:id="@+id/btn_whereto"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:text="Where to ?"
+        android:layout_marginTop="130dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:textColor="#ffffff"
+        android:paddingEnd="40dp"
+        >
+
+    </Button>
+
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="30dp"
-            android:src="@drawable/ic_launcher_background"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="#ffffff"
             >
 
         </ImageView>
@@ -50,8 +56,10 @@ tools:context=".SideNavigation.ui.home.HomeFragment">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chose a Saved Place"
-            android:layout_marginStart="15dp"
+            android:text="Chose a saved place"
+            android:textColor="#ffffff"
+            android:layout_marginStart="20dp"
+            android:textSize="17dp"
             >
 
         </TextView>
@@ -60,8 +68,9 @@ tools:context=".SideNavigation.ui.home.HomeFragment">
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="125dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="#ffffff"
+            android:layout_marginStart="89dp"
             >
 
         </ImageView>

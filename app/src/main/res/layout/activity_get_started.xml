@@ -6,43 +6,50 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#28363D"
     tools:context=".startup.GetStarted">
 
         <ImageView
+            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="400dp"
+            android:src="@drawable/ic_launcher_background"
             >
         </ImageView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/logo"
+        android:layout_width="268dp"
         android:layout_height="wrap_content"
-        android:text="Search Your Location"
-        android:textStyle="bold"
-        android:textSize="30dp"
         android:layout_marginTop="40dp"
-        >
+        android:fontFamily="@font/bangersregular"
+        android:text="Search Your Location"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold">
 
     </TextView>
 
     <TextView
+        android:id="@+id/sologan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Your Location"
         android:textSize="15dp"
+        android:textColor="#99AEAD"
         android:layout_marginTop="15dp"
         >
 
     </TextView>
 
     <Button
+        android:id="@+id/getstarted"
         android:layout_width="340dp"
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="58dp"
-        android:textColor="@android:color/black"
+        android:textColor="#28363D"
         android:text="LETS GET STARTED"
-        android:backgroundColor="@android:color/transparent"
         >
 
     </Button>

@@ -27,7 +27,7 @@ import java.util.Map;
 public class SignupActivity extends AppCompatActivity {
 
     TextInputLayout sg_name,sg_email, sg_password;
-    FloatingActionButton btn_signup;
+    Button btn_signup;
 
     FirebaseAuth auth;
     DatabaseReference myref= FirebaseDatabase.getInstance().getReference();

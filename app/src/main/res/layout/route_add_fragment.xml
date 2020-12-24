@@ -24,8 +24,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADD STOPS"
-                android:textStyle="bold"
-                android:textSize="30dp"
+                android:fontFamily="@font/bangersregular"
+                android:layout_marginBottom="30dp"
+                android:textSize="40dp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus No"
+                android:textSize="15dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="43dp"
                 >
 
             </TextView>
@@ -43,6 +55,18 @@
                 android:background="@drawable/border"
                 >
             </androidx.appcompat.widget.AppCompatSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Route Name"
+                android:textSize="15dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="15dp"
+                >
+
+            </TextView>
 
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/route_name"
