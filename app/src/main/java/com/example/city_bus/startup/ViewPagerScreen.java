@@ -54,7 +54,7 @@ public class ViewPagerScreen extends AppCompatActivity {
 
                 if(nextbtn.getText() == "Get Started"){
 
-                    startActivity(new Intent(getApplicationContext(), UserSideNavigationActivity.class));
+                    startActivity(new Intent(getApplicationContext(), GetStarted.class));
                 }
                 else{
 

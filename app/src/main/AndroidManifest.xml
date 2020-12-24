@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.City_bus">
-        <activity android:name=".startup.ViewPagerScreen"></activity>
+        <activity android:name=".startup.GetStarted"></activity>
+        <activity android:name=".startup.ViewPagerScreen" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -29,7 +30,7 @@
 
         <activity
             android:name=".FatchData.FatchStopsActivity"
-            android:label="Locations"></activity>
+            android:label="Locations" />
         <activity
             android:name=".FatchData.FatchPlacesActivity"
             android:label="Locations" />
@@ -37,11 +38,11 @@
         <activity
             android:name=".admin.AdminSideNavigation.AdminSideNavigationActivity"
             android:label="Admin Screen"
-            android:theme="@style/Theme.City_bus.NoActionBar"></activity>
+            android:theme="@style/Theme.City_bus.NoActionBar" />
         <activity
             android:name=".SideNavigation.SideNavigationActivity"
             android:label="@string/title_activity_side_navigation"
-            android:theme="@style/Theme.City_bus.NoActionBar"></activity>
+            android:theme="@style/Theme.City_bus.NoActionBar" />
         <activity
             android:name=".user.UserSideNavigation.UserSideNavigationActivity"
             android:label="@string/title_activity_side_navigation"
@@ -51,13 +52,11 @@
         <activity android:name=".login.ForgetPasswordActivity" />
         <activity android:name=".login.SignupActivity" />
         <activity android:name=".startup.Splash_Screen">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".MainActivity" />
     </application>

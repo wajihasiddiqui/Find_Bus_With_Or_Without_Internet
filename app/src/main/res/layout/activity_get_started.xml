@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".startup.GetStarted">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            >
+        </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Your Location"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginTop="40dp"
+        >
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Your Location"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+    </TextView>
+
+    <Button
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="58dp"
+        android:textColor="@android:color/black"
+        android:text="LETS GET STARTED"
+        android:backgroundColor="@android:color/transparent"
+        >
+
+    </Button>
+
+
+
+
+
+</LinearLayout>
