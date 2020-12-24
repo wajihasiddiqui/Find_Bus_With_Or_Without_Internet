@@ -11,19 +11,18 @@ import com.example.city_bus.R;
 import com.example.city_bus.adapter.placeadapter;
 import com.example.city_bus.database.BusesDatabase;
 import com.example.city_bus.model.Places;
+import com.example.city_bus.model.Stops;
 
 import java.util.ArrayList;
 
-public class FatchPlacesActivity extends AppCompatActivity {
+public class FatchStopsActivity extends AppCompatActivity {
 
     RecyclerView recyclerview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fatch_places);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_fatch_stops);
 
 
         ArrayList list = new ArrayList();
@@ -35,7 +34,7 @@ public class FatchPlacesActivity extends AppCompatActivity {
         cr.moveToFirst();
         while (!cr.isAfterLast())  {
 
-            Places obj = new Places(cr.getString(1));
+            Stops obj = new Stops(cr.getString(1));
             list.add(obj);
             cr.moveToNext();
         }
@@ -43,6 +42,8 @@ public class FatchPlacesActivity extends AppCompatActivity {
 
         placeadapter adapter = new placeadapter(list);
         recyclerview.setAdapter(adapter);
+
+
 
 
     }

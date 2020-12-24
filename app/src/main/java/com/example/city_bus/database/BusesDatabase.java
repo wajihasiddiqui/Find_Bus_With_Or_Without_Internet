@@ -27,11 +27,14 @@ public class BusesDatabase extends SQLiteOpenHelper {
         db.execSQL(create);
         String create2 = "CREATE TABLE Places(PLACE_ID INTEGER PRIMARY KEY AUTOINCREMENT, PLACE TEXT)";
         db.execSQL(create2);
+        String stops = "CREATE TABLE Stops(STOP_ID INTEGER PRIMARY KEY AUTOINCREMENT, BUS_NO INTEGER, ROUTE_NAME TEXT, STOP TEXT)";
+        db.execSQL(stops);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
 
     }
 
@@ -90,6 +93,26 @@ public class BusesDatabase extends SQLiteOpenHelper {
         List<String> list = new ArrayList<>();
 
         SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM Places", null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                list.add(cursor.getString(1));//adding 2nd column data
+
+            }
+            while (cursor.moveToNext());
+        }
+
+        return list;
+
+    }
+
+
+    public List<String> getbusno() {
+        List<String> list = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Buses", null);
 
         // looping through all rows and adding to list
@@ -104,5 +127,48 @@ public class BusesDatabase extends SQLiteOpenHelper {
         return list;
 
     }
+
+
+
+    public List<String> getroutename() {
+
+        List<String> list = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM Buses", null);
+
+        // Looping Through All Rows And Adding To List
+
+        if (cursor.moveToFirst()) {
+            do {
+                list.add(cursor.getString(6));//Adding 2nd Column Data
+
+            }
+            while (cursor.moveToNext());
+        }
+
+        return list;
+
+    }
+
+
+
+    public boolean InsertStops(int bus_no, String route_name, String stop){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValue = new ContentValues();
+        contentValue.put("BUS_NO",bus_no);
+        contentValue.put("ROUTE_NAME",route_name);
+        contentValue.put("STOP",stop);
+        long result = db.insert("Stops",null,contentValue);
+        if(result == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+
+    }
+
 
 }

@@ -64,14 +64,4 @@
         >
     </Button>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Show All Routes">
-
-    </TextView>
-
 </LinearLayout>

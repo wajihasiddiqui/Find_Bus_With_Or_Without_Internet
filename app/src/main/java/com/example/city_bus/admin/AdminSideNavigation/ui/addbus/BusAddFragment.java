@@ -24,10 +24,9 @@ public class BusAddFragment extends Fragment implements AdapterView.OnItemSelect
 
 
     BusesDatabase BusDatabase;
-    TextInputLayout bus_no,  bus_endlocation, bus_time,bus_distance,bus_routename;
+    TextInputLayout bus_no, bus_time,bus_distance,bus_routename;
 
-    Spinner bus_startlocations;
-//    Button addbus;
+    Spinner bus_startlocations, bus_endlocation;
 
 
     @Override
@@ -40,7 +39,7 @@ public class BusAddFragment extends Fragment implements AdapterView.OnItemSelect
 
         bus_no = (TextInputLayout)view.findViewById(R.id.busNo);
         bus_startlocations = (Spinner)view.findViewById(R.id.startLocation);
-        bus_endlocation = (TextInputLayout)view.findViewById(R.id.endLocation);
+        bus_endlocation = (Spinner)view.findViewById(R.id.endLocation);
         bus_time = (TextInputLayout)view.findViewById(R.id.time);
         bus_distance = (TextInputLayout)view.findViewById(R.id.distance);
         bus_routename = (TextInputLayout)view.findViewById(R.id.routeName);
@@ -48,17 +47,20 @@ public class BusAddFragment extends Fragment implements AdapterView.OnItemSelect
         CircularImageView addbus = (CircularImageView)view.findViewById(R.id.adddBus);
 
         bus_startlocations.setOnItemSelectedListener(this);
+        bus_endlocation.setOnItemSelectedListener(this);
 
 
 
         loadSpinnerData();
+
+        loadSpinnerEndLocatio();
 
 
 
         addbus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = BusDatabase.InsertData(Integer.parseInt( bus_no.getEditText().getText().toString()),bus_startlocations.getSelectedItem().toString(),bus_endlocation.getEditText().getText().toString(),Integer.parseInt(bus_time.getEditText().getText().toString()),bus_distance.getEditText().getText().toString(),bus_routename.getEditText().getText().toString());
+                boolean isInserted = BusDatabase.InsertData(Integer.parseInt( bus_no.getEditText().getText().toString()),bus_startlocations.getSelectedItem().toString(),bus_endlocation.getSelectedItem().toString(),Integer.parseInt(bus_time.getEditText().getText().toString()),bus_distance.getEditText().getText().toString(),bus_routename.getEditText().getText().toString());
 
                 if(isInserted = true){
 
@@ -76,6 +78,21 @@ public class BusAddFragment extends Fragment implements AdapterView.OnItemSelect
         });
 
         return view;
+
+    }
+
+    private void loadSpinnerEndLocatio() {
+
+        //database handler
+        BusDatabase = new BusesDatabase(getActivity());
+        //spinner drop down elements
+        List<String> list = BusDatabase.getAllPlaces();
+        //creating adapter for spinner
+        ArrayAdapter<String> placeadapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, list);
+        //drop down layout style - list view with radio button
+        placeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //attaching data adapter to spinner
+        bus_endlocation.setAdapter(placeadapter);
 
     }
 

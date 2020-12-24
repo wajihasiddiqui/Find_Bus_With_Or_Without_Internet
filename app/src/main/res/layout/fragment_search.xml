@@ -8,6 +8,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SideNavigation.ui.search.SearchFragment">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        >
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/current_location"
@@ -47,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="400dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="25dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         >
@@ -78,6 +84,8 @@
 
         </ImageView>
 
+
+    </LinearLayout>
 
     </LinearLayout>
 

@@ -52,7 +52,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
-        android:hint="Bus No"
+        android:hint="Name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -69,7 +69,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
-        android:hint="Bus No"
+        android:hint="Email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -87,7 +87,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
-        android:hint="Bus No"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -100,7 +101,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_action"
+        android:id="@+id/btn_signup"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="330dp"

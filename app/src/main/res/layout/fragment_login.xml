@@ -58,6 +58,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
         android:hint="Bus No"
+        app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -77,6 +78,7 @@
 
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/rememberMe"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="50dp"
@@ -123,55 +125,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="13dp">
 
         <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/lg_google"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="80dp"
-            android:src="@drawable/ic_launcher_background">
-
-        </com.mikhaellopez.circularimageview.CircularImageView>
-
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/ic_launcher_background">
-
-        </com.mikhaellopez.circularimageview.CircularImageView>
-
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
             android:src="@drawable/ic_launcher_background">
 
         </com.mikhaellopez.circularimageview.CircularImageView>
 
     </LinearLayout>
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
         android:text="Not a member yet? SignUp">
 
     </TextView>
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_action"
+        android:id="@+id/btn_login"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="3dp"
         android:src="@drawable/ic_launcher_background">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </LinearLayout>
+
 
 </LinearLayout>

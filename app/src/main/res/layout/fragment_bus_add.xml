@@ -54,22 +54,20 @@
             >
         </androidx.appcompat.widget.AppCompatSpinner>
 
-        <com.google.android.material.textfield.TextInputLayout
+
+        <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/endLocation"
             android:layout_width="330dp"
-            android:layout_height="70dp"
+            android:layout_height="53dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:overlapAnchor="false"
             android:layout_marginTop="10dp"
-            android:hint="End Location"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
+            android:background="@drawable/border"
+            >
+        </androidx.appcompat.widget.AppCompatSpinner>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/routeName"
