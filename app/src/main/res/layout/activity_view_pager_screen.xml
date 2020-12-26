@@ -32,7 +32,7 @@
         android:layout_marginTop="588dp"
         android:layout_marginStart="290dp"
         android:background="@android:color/transparent"
-        android:textColor="@android:color/black"
+        android:textColor="#99AEAD"
         android:text="NEXT" />
 
     <Button
@@ -43,7 +43,7 @@
         android:layout_marginTop="588dp"
         android:background="@android:color/transparent"
         android:text="BACK"
-        android:textColor="@android:color/black"
+        android:textColor="#99AEAD"
         android:visibility="invisible" />
 
 

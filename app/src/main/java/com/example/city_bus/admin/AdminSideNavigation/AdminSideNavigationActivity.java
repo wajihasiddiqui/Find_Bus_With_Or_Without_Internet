@@ -31,7 +31,7 @@ public class AdminSideNavigationActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfigurationa = new AppBarConfiguration.Builder(
-                R.id.nav_home_admin)
+                R.id.nav_home_admin, R.id.nav_addBus, R.id.nav_addBusStops, R.id.nav_addPlace)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.admin_nav_host_fragment);

@@ -24,7 +24,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/bangersregular"
         android:text="Search Your Location"
-        android:textColor="@color/white"
+        android:textColor="#99AEAD"
         android:textSize="30dp"
         android:textStyle="bold">
 
@@ -48,7 +48,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="58dp"
-        android:textColor="#28363D"
+        android:textColor="@color/white"
         android:text="LETS GET STARTED"
         >
 

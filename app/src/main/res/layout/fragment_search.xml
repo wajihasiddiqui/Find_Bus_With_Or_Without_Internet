@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#2F575D"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SideNavigation.ui.search.SearchFragment">
 
@@ -20,7 +21,10 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:hint="Bus No"
+        android:hint="Current Location"
+        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        app:startIconTint="#99AEAD"
+        android:textColorHint="#99AEAD"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -36,7 +40,10 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:hint="Bus No"
+        android:hint="Destination"
+        android:textColorHint="#99AEAD"
+        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        app:startIconTint="#99AEAD"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -62,7 +69,9 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="45dp"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="#99AEAD"
             >
 
         </ImageView>
@@ -70,20 +79,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
             android:text="Chose a saved place"
+            android:textColor="#99AEAD"
+            android:layout_marginStart="20dp"
+            android:textSize="17dp"
             >
 
         </TextView>
 
+
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="105dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="#99AEAD"
+            android:layout_marginStart="89dp"
             >
 
         </ImageView>
-
 
     </LinearLayout>
 

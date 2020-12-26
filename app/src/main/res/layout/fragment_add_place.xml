@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#28363D"
     tools:context=".admin.AdminSideNavigation.ui.addplace.AddPlaceFragment">
 
     <LinearLayout
@@ -20,27 +21,23 @@
             android:textStyle="bold"
             android:textSize="30dp"
             android:layout_marginBottom="200dp"
+            android:textColor="#99AEAD"
             >
 
         </TextView>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/Place"
             android:layout_width="330dp"
             android:layout_height="70dp"
             android:layout_marginBottom="180dp"
             android:hint="Place"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:textColorHint="#99AEAD"
+            android:background="@drawable/border"
+            >
 
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
+        </EditText>
 
 
         <com.mikhaellopez.circularimageview.CircularImageView

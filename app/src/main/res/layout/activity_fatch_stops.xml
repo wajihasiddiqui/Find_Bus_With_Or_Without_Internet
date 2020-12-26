@@ -17,7 +17,7 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:textColor="@color/white"
+        android:textColor="#99AEAD"
         android:fontFamily="@font/bangersregular"
         android:textSize="35dp"
         >

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2F575D"
     tools:context=".admin.AdminSideNavigation.ui.addbus.BusAddFragment">
 
     <LinearLayout
@@ -18,6 +20,7 @@
             android:text="ADD BUS"
             android:textStyle="bold"
             android:textSize="30dp"
+            android:textColor="#99AEAD"
             >
 
         </TextView>
@@ -29,6 +32,8 @@
             android:layout_height="70dp"
             android:layout_marginTop="30dp"
             android:hint="Bus No"
+            app:startIconTint="#99AEAD"
+            app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -49,6 +54,8 @@
             android:gravity="center"
             android:spinnerMode="dropdown"
             android:overlapAnchor="false"
+            app:startIconTint="#99AEAD"
+            app:endIconTint="#99AEAD"
             android:layout_marginTop="10dp"
             android:background="@drawable/border"
             >
@@ -64,6 +71,8 @@
             android:gravity="center"
             android:spinnerMode="dropdown"
             android:overlapAnchor="false"
+            app:startIconTint="#99AEAD"
+            app:endIconTint="#99AEAD"
             android:layout_marginTop="10dp"
             android:background="@drawable/border"
             >
@@ -75,6 +84,8 @@
             android:layout_marginTop="10dp"
             android:layout_height="70dp"
             android:hint="Route Name"
+            app:startIconTint="#99AEAD"
+            app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -92,6 +103,8 @@
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
             android:hint="Time"
+            app:startIconTint="#99AEAD"
+            app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -109,6 +122,8 @@
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
             android:hint="Distance"
+            app:startIconTint="#99AEAD"
+            app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 

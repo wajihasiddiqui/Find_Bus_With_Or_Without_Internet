@@ -28,7 +28,7 @@ public class UserSideNavigationActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfigurationa = new AppBarConfiguration.Builder(
-                R.id.nav_home_user, R.id.nav_showAllRoutes_user)
+                R.id.nav_home_user, R.id.nav_help)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.user_nav_host_fragment);

@@ -5,6 +5,13 @@
 
     <group android:checkableBehavior="single">
 
+
+                <item
+                    android:title=""
+                    >
+                </item>
+
+
                 <item
                     android:id="@+id/nav_home"
                     android:icon="@drawable/ic_menu_gallery"
@@ -14,63 +21,54 @@
                 <item
                     android:id="@+id/nav_search"
                     android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Search" />
 
-                    android:title="Classic Search" />
 
-
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Profile"
+                   />
                 <item
                     android:id="@+id/nav_help"
                     android:icon="@drawable/ic_menu_camera"
                     android:title="Help And Support"
-                   />
-        <item
-            android:title="PROFILE"
-            >
-            <menu>
-                <item
-                    android:id="@+id/nav_login"
-                    android:icon="@drawable/ic_menu_gallery"
-                    android:title="Login"
-                  />
-                <item
-                    android:id="@+id/nav_profile"
-                    android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Profile"
-                   />
-
-
-            </menu>
-        </item>
-
-        <item
-            android:title="Home"
-
-            >
-            <menu>
-                <item
-                    android:id="@+id/nav_call"
-                    android:icon="@drawable/ic_menu_gallery"
-                    android:title="Call City Bus Support"
-                   />
-                <item
-                    android:id="@+id/nav_invitefriend"
-                    android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Invite a Friends"
-                   />
-                <item
-                    android:id="@+id/nav_faq"
-                    android:icon="@drawable/ic_menu_slideshow"
-                    android:title="FAQ"
-                  />
-                <item
-                    android:id="@+id/nav_logout"
-                    android:icon="@drawable/ic_menu_gallery"
-                    android:onClick="logout"
-                    android:title="Login"
                     />
 
-            </menu>
-        </item>
+                <item
+                    android:id="@+id/nav_call"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Call City Bus"
+                    />
+
+                <item
+                    android:title=""
+                    >
+                </item>
+
+                <item
+                    android:title=""
+                    >
+                </item>
+
+                <item
+                    android:title=""
+                    >
+                </item>
+
+                <item
+                    android:title=""
+                    >
+                </item>
+
+                    <menu>
+                        <item
+                            android:id="@+id/nav_logout"
+                            android:icon="@drawable/ic_menu_gallery"
+                            android:title="Logout"
+                            />
+                    </menu>
+
 
     </group>
 </menu>

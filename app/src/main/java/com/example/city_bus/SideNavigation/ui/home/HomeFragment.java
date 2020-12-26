@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment {
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
 
-//
+
 //        if (mapFragment != null) {
 //            mapFragment.getMapAsync(callback);
 //

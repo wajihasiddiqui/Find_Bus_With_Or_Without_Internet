@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#2F575D"
     tools:context=".user.UserSideNavigation.ui.home.UserHomeFragment">
 
     <ImageView
@@ -14,13 +15,16 @@
         >
 
     </ImageView>
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="154dp"
         android:layout_height="wrap_content"
-        android:text="Any Text Here"
-        android:textStyle="bold"
         android:layout_marginTop="50dp"
-        android:textSize="25dp">
+        android:fontFamily="@font/bangersregular"
+        android:text="Any Text Here"
+        android:textColor="#C4CDC1"
+        android:textSize="30dp">
+
     </TextView>
 
     <com.google.android.material.textfield.TextInputLayout

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.city_bus.R;
@@ -18,7 +19,7 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 public class AddPlaceFragment extends Fragment {
 
     BusesDatabase BusDatabase;
-    TextInputLayout addplace;
+    EditText addplace;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,7 +30,7 @@ public class AddPlaceFragment extends Fragment {
 
         BusDatabase = new BusesDatabase(getActivity());
 
-        addplace = (TextInputLayout)view.findViewById(R.id.Place);
+        addplace = (EditText)view.findViewById(R.id.Place);
         CircularImageView btnaddplace = (CircularImageView)view.findViewById(R.id.btnaddplace);
 
 
@@ -37,7 +38,7 @@ public class AddPlaceFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                boolean isInserted = BusDatabase.InsertPlace(addplace.getEditText().getText().toString());
+                boolean isInserted = BusDatabase.InsertPlace(addplace.getText().toString());
 
                 if(isInserted = true){
 
