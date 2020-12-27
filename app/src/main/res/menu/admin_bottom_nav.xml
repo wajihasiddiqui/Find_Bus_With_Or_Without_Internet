@@ -8,27 +8,27 @@
         />
 
 
-    <item android:id="@+id/profile"
-        android:title="Profile"
+    <item android:id="@+id/buses"
+        android:title="Buses"
         android:icon="@drawable/ic_menu_gallery"
         />
 
 
 
-    <item android:id="@+id/placeholder"
+    <item android:id="@+id/place"
         android:title="">
 
     </item>
 
 
     <item android:id="@+id/addbus"
-        android:title="Add Bus"
+        android:title="Places"
         android:icon="@drawable/ic_menu_gallery"
         />
 
 
     <item android:id="@+id/addstops"
-        android:title="Add Routes "
+        android:title="Logout "
         android:icon="@drawable/ic_menu_gallery"
         />
 

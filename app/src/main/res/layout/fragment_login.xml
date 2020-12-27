@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#28363D"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SideNavigation.ui.login.LoginFragment">
 
@@ -11,27 +12,30 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
         android:src="@drawable/ic_launcher_background"
         >
     </ImageView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Any Text Here"
-        android:textSize="25dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
-        android:textStyle="bold">
+        android:fontFamily="@font/bangersregular"
+        android:text="Welcome Back  !"
+        android:textColor="#C4CDC1"
+        android:textSize="25dp">
+
     </TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Any Text Here"
+        android:text="Sign In to continue"
         android:textSize="15dp"
+        android:textColor="#C4CDC1"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp">
+        >
     </TextView>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +44,10 @@
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
-        android:hint="Bus No"
+        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        app:startIconTint="#C4CDC1"
+        android:hint="Email"
+        android:textColorHint="#99AEAD"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
@@ -57,7 +64,11 @@
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
-        android:hint="Bus No"
+        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        app:startIconTint="#C4CDC1"
+        android:hint="Password"
+        android:textColorHint="#99AEAD"
+        app:endIconTint="#99AEAD"
         app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -81,6 +92,7 @@
             android:id="@+id/rememberMe"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:textColor="#99AEAD"
             android:layout_marginStart="50dp"
             >
 
@@ -90,7 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Remember Me"
-            android:layout_marginStart="2dp">
+            android:textColor="#99AEAD"
+            android:layout_marginStart="10dp">
 
         </TextView>
 
@@ -98,6 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="59dp"
+            android:textColor="#99AEAD"
             android:text="Forget Password?">
 
         </TextView>
@@ -108,6 +122,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="#99AEAD"
+        android:textSize="22dp"
+        android:fontFamily="@font/bangersregular"
         android:layout_marginTop="15dp"
         android:text="-OR-">
 
@@ -118,6 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
+        android:textColor="#99AEAD"
         android:text="Sign in with">
 
     </TextView>
@@ -137,6 +155,7 @@
 
         </com.mikhaellopez.circularimageview.CircularImageView>
 
+
     </LinearLayout>
 
     <LinearLayout
@@ -148,6 +167,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
+        android:textColor="#99AEAD"
         android:layout_marginTop="20dp"
         android:text="Not a member yet? SignUp">
 

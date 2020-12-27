@@ -33,6 +33,7 @@
             android:layout_marginTop="30dp"
             android:hint="Bus No"
             app:startIconTint="#99AEAD"
+            android:textColorHint="#99AEAD"
             app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -49,6 +50,7 @@
             android:id="@+id/startLocation"
             android:layout_width="330dp"
             android:layout_height="53dp"
+            android:textColorHint="#99AEAD"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:gravity="center"
@@ -68,6 +70,7 @@
             android:layout_height="53dp"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
+            android:textColorHint="#99AEAD"
             android:gravity="center"
             android:spinnerMode="dropdown"
             android:overlapAnchor="false"
@@ -84,6 +87,7 @@
             android:layout_marginTop="10dp"
             android:layout_height="70dp"
             android:hint="Route Name"
+            android:textColorHint="#99AEAD"
             app:startIconTint="#99AEAD"
             app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -103,6 +107,7 @@
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
             android:hint="Time"
+            android:textColorHint="#99AEAD"
             app:startIconTint="#99AEAD"
             app:endIconTint="#99AEAD"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -121,6 +126,7 @@
             android:layout_width="330dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
+            android:textColorHint="#99AEAD"
             android:hint="Distance"
             app:startIconTint="#99AEAD"
             app:endIconTint="#99AEAD"

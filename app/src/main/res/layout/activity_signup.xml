@@ -25,7 +25,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/bangersregular"
-        android:text="Any Text Here"
+        android:text="Create"
         android:textColor="#C4CDC1"
         android:textSize="35dp">
 
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:fontFamily="@font/bangersregular"
-        android:text="Any Text Here"
+        android:text="Account"
         android:textColor="#C4CDC1"
         android:textSize="35dp">
 
@@ -45,7 +45,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Any Text Here"
+        android:text="SignUp to start your new Journy"
         android:textSize="17dp"
         android:textColor="#99AEAD"
         android:layout_marginStart="50dp"

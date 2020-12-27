@@ -30,6 +30,7 @@ public class AdminHomeFragment extends Fragment {
 
         Button showplace = (Button) view.findViewById(R.id.showplace);
 
+
         showbus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

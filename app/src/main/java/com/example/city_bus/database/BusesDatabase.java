@@ -65,6 +65,14 @@ public class BusesDatabase extends SQLiteOpenHelper {
         return cur;
     }
 
+
+
+    public Cursor GetSearchResult(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cur = db.rawQuery("SELECT * FROM Buses WHERE BUS_STARTLOCATION == ? & BUS_ENDLOCATION == ? ", null);
+        return cur;
+    }
+
     public boolean InsertPlace(String Place){
 
         SQLiteDatabase db = this.getWritableDatabase();
