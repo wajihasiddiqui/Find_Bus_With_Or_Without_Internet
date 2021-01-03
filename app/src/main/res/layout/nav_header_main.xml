@@ -18,11 +18,12 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_launcher_background">
+        android:src="@drawable/person">
 
     </com.mikhaellopez.circularimageview.CircularImageView>
 
     <TextView
+        android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="3dp"
@@ -30,6 +31,7 @@
         android:textSize="25dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     <TextView
+        android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="2dp"

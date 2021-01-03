@@ -10,18 +10,18 @@
     <ImageView
         android:id="@+id/bus_routes_map"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="272dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_launcher_background">
+        android:src="@drawable/getstarted2">
 
     </ImageView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
-        android:layout_below="@+id/bus_routes_map"
         android:layout_width="match_parent"
-        android:layout_marginTop="15dp"
-        android:layout_height="match_parent">
+        android:layout_height="441dp"
+        android:layout_below="@+id/bus_routes_map"
+        android:layout_marginTop="18dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

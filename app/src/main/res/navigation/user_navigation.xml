@@ -8,8 +8,14 @@
     <fragment
         android:id="@+id/nav_home_user"
         android:name="com.example.city_bus.user.UserSideNavigation.ui.home.UserHomeFragment"
-        android:label="home"
+        android:label="City Bus"
         tools:layout="@layout/fragment_user_home" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.city_bus.SideNavigation.ui.login.LoginFragment"
+        android:label="City Bus"
+        tools:layout="@layout/fragment_login" />
 
 
 </navigation>

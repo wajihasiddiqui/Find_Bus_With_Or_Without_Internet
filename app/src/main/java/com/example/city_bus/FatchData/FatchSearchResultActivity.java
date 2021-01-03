@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 
@@ -12,6 +13,7 @@ import com.example.city_bus.adapter.busadapter;
 import com.example.city_bus.adapter.searchbusadapter;
 import com.example.city_bus.database.BusesDatabase;
 import com.example.city_bus.model.Buses;
+import com.example.city_bus.user.UserSideNavigation.ui.home.UserHomeFragment;
 
 import java.util.ArrayList;
 
@@ -19,10 +21,15 @@ public class FatchSearchResultActivity extends AppCompatActivity {
 
     RecyclerView recyclerview;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fatch_search_result);
+//
+//        Intent intent = getIntent();
+//        String startLocation = intent.getStringExtra("Start Location");
+//        String endLocation = intent.getStringExtra("End Location");
 
 
         ArrayList list = new ArrayList();
@@ -30,7 +37,7 @@ public class FatchSearchResultActivity extends AppCompatActivity {
         recyclerview = findViewById(R.id.recyclerview);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
 
-        Cursor cr = new BusesDatabase(this).GetSearchResult();
+        Cursor cr = new BusesDatabase(this).GetSearchResult(UserHomeFragment.start,UserHomeFragment.end);
         cr.moveToFirst();
         while (!cr.isAfterLast())  {
 

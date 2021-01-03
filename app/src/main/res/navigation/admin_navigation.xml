@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/nav_addPlace"
         android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addplace.AddPlaceFragment"
-        android:label="ADD BUS"
+        android:label="ADD PLACE"
         tools:layout="@layout/fragment_add_place" />
 
     <fragment
@@ -33,7 +33,6 @@
     <fragment
         android:id="@+id/nav_logout"
         android:name="com.example.city_bus.user.UserSideNavigation.ui.home.UserHomeFragment"
-        android:label="ADD STOPS"
-        tools:layout="@layout/fragment_user_home" />
+        tools:layout="@layout/fragment_user_home"/>
 
 </navigation>

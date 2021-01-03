@@ -9,19 +9,19 @@
     android:background="#28363D"
     tools:context=".startup.GetStarted">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:src="@drawable/ic_launcher_background"
-            >
-        </ImageView>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:src="@drawable/getstarted">
+
+    </ImageView>
 
     <TextView
         android:id="@+id/logo"
         android:layout_width="268dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/bangersregular"
         android:text="Search Your Location"
         android:textColor="#99AEAD"
@@ -37,7 +37,7 @@
         android:text="Search Your Location"
         android:textSize="15dp"
         android:textColor="#99AEAD"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         >
 
     </TextView>
@@ -46,8 +46,8 @@
         android:id="@+id/getstarted"
         android:layout_width="340dp"
         android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="80dp"
         android:textColor="@color/white"
         android:text="LETS GET STARTED"
         >

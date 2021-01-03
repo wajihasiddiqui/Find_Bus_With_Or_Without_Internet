@@ -18,7 +18,7 @@
         android:id="@+id/dotlayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="560dp"
+        android:layout_marginTop="670dp"
         android:layout_marginStart="150dp"
         android:orientation="horizontal"
         android:padding="20dp">
@@ -29,8 +29,8 @@
         android:id="@+id/nextbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="588dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginTop="698dp"
+        android:layout_marginStart="280dp"
         android:background="@android:color/transparent"
         android:textColor="#99AEAD"
         android:text="NEXT" />
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="588dp"
+        android:layout_marginTop="698dp"
         android:background="@android:color/transparent"
         android:text="BACK"
         android:textColor="#99AEAD"

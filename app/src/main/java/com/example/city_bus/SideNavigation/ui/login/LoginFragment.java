@@ -15,13 +15,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.city_bus.R;
 import com.example.city_bus.SideNavigation.ui.home.HomeFragment;
+import com.example.city_bus.admin.AdminSideNavigation.ui.home.AdminHomeFragment;
+import com.example.city_bus.login.SignupActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -56,25 +60,26 @@ public class LoginFragment extends Fragment {
 
 
     private static final int RC_SIGN_IN = 123;
-    TextInputLayout lg_email, lg_password;
-    FloatingActionButton btn_login;
+    EditText email, password;
+    Button btn_login;
     CircularImageView lg_google;
     CheckBox rememberMe;
+    Button signup;
 
     FirebaseAuth auth;
     DatabaseReference myref= FirebaseDatabase.getInstance().getReference();
 
     private GoogleSignInClient mGoogleSignInClient;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = auth.getCurrentUser();
-        if (currentUser != null) {
-            Intent intent = new Intent(getActivity(), HomeFragment.class);
-            startActivity(intent);
-        }
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        FirebaseUser currentUser = auth.getCurrentUser();
+//        if (currentUser != null) {
+//            Intent intent = new Intent(getActivity(), HomeFragment.class);
+//            startActivity(intent);
+//        }
+//    }
 
 
     @Override
@@ -83,24 +88,40 @@ public class LoginFragment extends Fragment {
         View view =inflater.inflate(R.layout.fragment_login, container, false);
 
 
-        lg_email = (TextInputLayout)view.findViewById(R.id.lg_email);
-        lg_password = (TextInputLayout)view.findViewById(R.id.lg_password);
-        btn_login = (FloatingActionButton)view.findViewById(R.id.btn_login);
+        email = (EditText)view.findViewById(R.id.lg_email);
+        password = (EditText)view.findViewById(R.id.lg_password);
+        btn_login = (Button)view.findViewById(R.id.btn_login);
         lg_google = (CircularImageView)view.findViewById(R.id.lg_google);
         rememberMe = (CheckBox)view.findViewById(R.id.rememberMe);
+//        auth = FirebaseAuth.getInstance();
+
+        signup = (Button)view.findViewById(R.id.signup);
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SignupActivity.class));
+            }
+        });
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                auth.signInWithEmailAndPassword(lg_email.getEditText().getText().toString(),lg_password.getEditText().getText().toString())
+                auth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Map<String,String> map=new HashMap<>();
-                                map.put("email",lg_email.getEditText().getText().toString());
+                                map.put("email",email.getText().toString());
                                 myref.child(authResult.getUser().getUid()).setValue(map);
-                                startActivity(new Intent(getActivity(), HomeFragment.class));
+                                if(email.getText().toString() == "admin@gmail.com") {
+                                    startActivity(new Intent(getActivity(), AdminHomeFragment.class));
+                                }
+                                else {
+                                    startActivity(new Intent(getActivity(), HomeFragment.class));
+                                }
+
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {

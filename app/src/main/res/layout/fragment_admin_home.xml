@@ -10,15 +10,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="390dp"
-        >
+        android:layout_height="279dp">
 
         <ImageView
             android:id="@+id/bus_routes_map"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_launcher_background"
-            >
+            android:layout_height="277dp"
+            android:src="@drawable/getstarted2">
 
         </ImageView>
 
@@ -28,7 +26,7 @@
         android:layout_width="171dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/bangersregular"
         android:text="City Bus"
         android:textColor="#99AEAD"
@@ -40,10 +38,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="50dp"
-        >
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/showbus"
@@ -57,59 +54,57 @@
         </Button>
 
 
-
         <Button
             android:id="@+id/showplace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Place"
-            android:textColor="@color/white"
             android:layout_marginStart="30dp"
-            >
+            android:text="Show Places"
+            android:textColor="@color/white">
 
         </Button>
 
     </LinearLayout>
-    
-    
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomappbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:fabCradleMargin="20dp"
-            app:fabCradleVerticalOffset="10dp"
-            app:fabCradleRoundedCornerRadius="20dp"
-            android:layout_gravity="bottom">
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                app:menu="@menu/admin_bottom_nav">
-
-            </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+<!--        <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--            android:id="@+id/bottomappbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:fabCradleMargin="20dp"-->
+<!--            app:fabCradleVerticalOffset="10dp"-->
+<!--            app:fabCradleRoundedCornerRadius="20dp"-->
+<!--            android:layout_gravity="bottom">-->
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_menu_camera"
-            app:layout_anchor="@id/bottomappbar"
-            >
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:id="@+id/bottomNavigationView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                app:menu="@menu/admin_bottom_nav">-->
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+<!--            </com.google.android.material.bottomnavigation.BottomNavigationView>-->
 
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+<!--        </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_menu_camera"-->
+<!--            app:layout_anchor="@id/bottomappbar"-->
+<!--            >-->
+
+<!--        </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
 </LinearLayout>

@@ -18,15 +18,25 @@
         >
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:gravity="center_vertical"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:orientation="vertical"
             android:background="@drawable/border"
             >
 
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/buspng"
+                >
+
+            </ImageView>
 
             <TextView
                 android:id="@+id/adbus_no"
@@ -35,13 +45,14 @@
                 android:text="Bus No"
                 android:gravity="center"
                 android:textColor="#28363D"
+                android:layout_marginTop="17dp"
                 android:fontFamily="@font/bangersregular"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 >
 
             </TextView>
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -50,16 +61,16 @@
             android:gravity="center_vertical"
             >
 
-        <TextView
-            android:id="@+id/adroute_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Route Name"
-            android:fontFamily="@font/bangersregular"
-            android:textColor="#28363D"
-            android:textSize="16dp">
+            <TextView
+                android:id="@+id/adroute_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bangersregular"
+                android:text="Route Name"
+                android:textColor="#28363D"
+                android:textSize="16dp">
 
-        </TextView>
+            </TextView>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,14 +84,14 @@
                     android:layout_height="15dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginRight="5dp"
-                    android:src="@drawable/ic_baseline_add_24">
+                    android:src="@drawable/traveltime">
 
                 </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Time Travel  "
+                    android:text="Travel Time"
                     android:textSize="16dp"
                     android:textColor="#28363D"
                     >
@@ -128,7 +139,7 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginRight="5dp"
                     android:textColor="#28363D"
-                    android:src="@drawable/ic_baseline_add_24">
+                    android:src="@drawable/distance2">
 
                 </ImageView>
 
@@ -173,18 +184,17 @@
         <LinearLayout
             android:layout_width="60dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="39dp"
+            android:layout_marginStart="44dp"
             android:background="#2F575D"
             android:gravity="center"
             >
 
-
-
             <ImageView
+                android:id="@+id/show_stops"
                 android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background">
-
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawableTint="#C4CDC1">
             </ImageView>
 
         </LinearLayout>

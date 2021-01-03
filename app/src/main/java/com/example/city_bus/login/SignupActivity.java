@@ -26,8 +26,8 @@ import java.util.Map;
 
 public class SignupActivity extends AppCompatActivity {
 
-    TextInputLayout sg_name,sg_email, sg_password;
-    Button btn_signup;
+    EditText name, email, password;
+    Button btn_signup, signin;
 
     FirebaseAuth auth;
     DatabaseReference myref= FirebaseDatabase.getInstance().getReference();
@@ -37,27 +37,36 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        sg_name = findViewById(R.id.sg_name);
-        sg_email = findViewById(R.id.sg_email);
-        sg_password = findViewById(R.id.sg_passsword);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        auth = FirebaseAuth.getInstance();
+        name = findViewById(R.id.sg_name);
+        email = findViewById(R.id.sg_email);
+        password = findViewById(R.id.sg_passsword);
 
         btn_signup = findViewById(R.id.btn_signup);
+        signin = findViewById(R.id.signin);
+
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignupActivity.this, LoginFragment.class));
+            }
+        });
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                auth.createUserWithEmailAndPassword(sg_email.getEditText().getText().toString(),sg_password.getEditText().getText().toString())
+                auth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Map<String,String> map=new HashMap<>();
-                                map.put("email",sg_email.getEditText().getText().toString());
+                                map.put("email",email.getText().toString());
                                 myref.child(authResult.getUser().getUid()).setValue(map);
 
-
                                 startActivity(new Intent(SignupActivity.this, LoginFragment.class));
-
-
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {

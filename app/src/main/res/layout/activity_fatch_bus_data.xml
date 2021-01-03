@@ -17,7 +17,7 @@
         android:fontFamily="@font/bangersregular"
         android:layout_marginTop="20dp"
         android:textColor="#99AEAD"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="2dp"
         android:textSize="40dp"
         >
 
@@ -27,23 +27,11 @@
         android:id="@+id/recyclerview"
         android:layout_below="@+id/list"
         android:layout_width="match_parent"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_height="match_parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_action"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_baseline_check_24"
-        android:layout_margin="30dp"
-        android:layout_alignParentRight="true"
-        >
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 </RelativeLayout>

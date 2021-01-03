@@ -3,56 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#2F575D"
+    android:background="#28363D"
     tools:context=".user.UserSideNavigation.ui.home.UserHomeFragment">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/logo"
         >
 
     </ImageView>
 
     <TextView
-        android:layout_width="154dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/bangersregular"
-        android:text="Any Text Here"
+        android:text="Search Your Location"
         android:textColor="#C4CDC1"
         android:textSize="30dp">
 
     </TextView>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/start_location"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_marginTop="30dp"
-        android:hint="Bus No"
+        android:hint="FROM"
+        app:startIconDrawable="@drawable/ic_baseline_my_location_24"
+        app:startIconTint="#C4CDC1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/start_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
+<!--    <AutoCompleteTextView-->
+<!--        android:id="@+id/autocomplete"-->
+<!--        android:layout_width="330dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="FROM"-->
+<!--        >-->
+<!--    </AutoCompleteTextView>-->
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/end_location"
+
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_marginTop="30dp"
-        android:hint="Bus No"
+        android:hint="TO"
+        app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+        app:startIconTint="#C4CDC1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/end_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />

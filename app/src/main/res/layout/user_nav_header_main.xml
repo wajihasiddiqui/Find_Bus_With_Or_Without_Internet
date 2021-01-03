@@ -18,7 +18,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_launcher_background">
+        android:src="@drawable/logo">
 
     </com.mikhaellopez.circularimageview.CircularImageView>
 
@@ -26,15 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="3dp"
-        android:text="@string/nav_header_title"
+        android:text="City Bus"
         android:textSize="25dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="2dp"
-        android:text="@string/nav_header_title"
-        android:textSize="13dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
 </LinearLayout>

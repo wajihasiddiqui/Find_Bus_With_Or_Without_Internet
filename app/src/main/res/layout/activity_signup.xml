@@ -13,16 +13,16 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="15dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/logo"
         >
     </ImageView>
 
     <TextView
         android:layout_width="201dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/bangersregular"
         android:text="Create"
@@ -34,7 +34,7 @@
     <TextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:fontFamily="@font/bangersregular"
         android:text="Account"
         android:textColor="#C4CDC1"
@@ -48,16 +48,16 @@
         android:text="SignUp to start your new Journy"
         android:textSize="17dp"
         android:textColor="#99AEAD"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp">
     </TextView>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sg_name"
+
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
-        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        android:layout_marginStart="40dp"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
         app:startIconTint="#C4CDC1"
         android:hint="Name"
         android:textColorHint="#99AEAD"
@@ -65,6 +65,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sg_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#99AEAD"
@@ -73,44 +74,49 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sg_email"
+
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:hint="Email"
-        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
         app:startIconTint="#99AEAD"
         android:textColorHint="#99AEAD"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sg_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#99AEAD"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sg_passsword"
+
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:hint="Password"
         app:endIconMode="password_toggle"
         app:startIconTint="#99AEAD"
         app:endIconTint="#99AEAD"
         android:textColorHint="#99AEAD"
-        app:startIconDrawable="@drawable/ic_baseline_add_24"
+        app:startIconDrawable="@drawable/key"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sg_passsword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:textColor="#99AEAD"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -120,7 +126,7 @@
         android:id="@+id/btn_signup"
         android:layout_width="330dp"
         android:layout_height="60dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="Sign Up"
         android:textColor="@color/white"
@@ -128,18 +134,17 @@
 
     </Button>
 
-
-    <TextView
+    <Button
+        android:id="@+id/signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="16dp"
-        android:drawableTint="@color/white"
-        android:layout_marginTop="40dp"
         android:textColor="#99AEAD"
-        android:text="Not a member yet? SignUp">
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@color/transparent"
+        android:text="Have an Account? Sign In">
 
-    </TextView>
+    </Button>
 
 
 

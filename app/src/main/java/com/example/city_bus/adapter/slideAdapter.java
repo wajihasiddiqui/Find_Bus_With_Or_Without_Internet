@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,25 +27,33 @@ public class slideAdapter extends PagerAdapter {
 
     int[] img = {
 
-            R.drawable.sho,
-            R.drawable.sho,
-            R.drawable.sho,
+            R.drawable.getstarted,
+            R.drawable.getstarted2,
+            R.drawable.getstarted,
 
     };
 
     public String[] heading = {
 
-            "kjehjd",
-            "kjbkjjjmmmmmmmmmmmm",
-            "kjehjd"
+
+            "Search Your Bus",
+            "Search Your Bus",
+            "Sit Back And Enjoy"
 
     };
 
     public String[] description = {
 
-            "kjehjd",
-            "kjehjd",
-            "kjehjd"
+
+            "You can search any place with-in the karachi." +
+                    "We will display specific or all related " +
+                    "buses to match your search",
+            "You can search any place with-in the karachi." +
+                    "We will display specific or all related " +
+                    "buses to match your search",
+            "We will handle everything for you. As you have" +
+                    " the app in your pocket then you don't have" +
+                    "to worry about anything."
 
     };
 
@@ -58,7 +67,7 @@ public class slideAdapter extends PagerAdapter {
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
 
-        return view == (RelativeLayout)object;
+        return view == (LinearLayout)object;
     }
 
     @NonNull
@@ -85,7 +94,7 @@ public class slideAdapter extends PagerAdapter {
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
 
-        container.removeView((RelativeLayout)object);
+        container.removeView((LinearLayout)object);
     }
 
 }

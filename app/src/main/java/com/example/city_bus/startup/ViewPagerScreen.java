@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -35,6 +36,8 @@ public class ViewPagerScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_screen);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         viewpager = findViewById(R.id.viewpager);
         dotlayout = findViewById(R.id.dotlayout);
 
@@ -52,7 +55,7 @@ public class ViewPagerScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(nextbtn.getText() == "Get Started"){
+                if(nextbtn.getText() == "Continue"){
 
                     startActivity(new Intent(getApplicationContext(), GetStarted.class));
                 }
@@ -85,14 +88,14 @@ public class ViewPagerScreen extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226"));
             mDots[i].setTextSize(45);
-            mDots[i].setTextColor(getResources().getColor(R.color.black));
+            mDots[i].setTextColor(getResources().getColor(R.color.lightwhite));
             dotlayout.addView(mDots[i]);
 
         }
 
         if(mDots.length > 0){
 
-            mDots[position].setTextColor(getResources().getColor(R.color.purple_500));
+            mDots[position].setTextColor(getResources().getColor(R.color.white2));
         }
     }
 
@@ -120,7 +123,7 @@ public class ViewPagerScreen extends AppCompatActivity {
                 nextbtn.setEnabled(true);
                 backbtn.setEnabled(true);
                 backbtn.setVisibility(View.VISIBLE);
-                nextbtn.setText("Get Started");
+                nextbtn.setText("Continue");
 
                 backbtn.setText("Back");
             }
