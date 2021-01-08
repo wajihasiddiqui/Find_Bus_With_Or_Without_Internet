@@ -30,10 +30,8 @@ import java.util.List;
 public class UserHomeFragment extends Fragment  {
 
 
-    EditText bus_startlocations, bus_endlocation;
+    AutoCompleteTextView bus_startlocations, bus_endlocation;
     Button search;
-
-    AutoCompleteTextView autoComplete;
 
     BusesDatabase BusDatabase;
     public static String start, end;
@@ -46,18 +44,19 @@ public class UserHomeFragment extends Fragment  {
         View view =inflater.inflate(R.layout.fragment_user_home, container, false);
 
 
-        bus_startlocations = (EditText)view.findViewById(R.id.start_location);
-        bus_endlocation = (EditText)view.findViewById(R.id.end_location);
+        bus_endlocation = view.findViewById(R.id.end_location);
 
-        autoComplete = view.findViewById(R.id.autocomplete);
+        bus_startlocations = view.findViewById(R.id.start_location);
 
 
-//        BusDatabase = new BusesDatabase(getActivity());
-//        List<String> list = BusDatabase.getAllPlaces();
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,list);
-//        autoComplete = view.findViewById(R.id.autoComplete);
-//        autoComplete.setAdapter(adapter);
-//
+        BusDatabase = new BusesDatabase(getActivity());
+        List<String> list = BusDatabase.getAllPlaces();
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,list);
+        bus_startlocations.setAdapter(adapter);
+        bus_startlocations.setThreshold(1);
+        bus_endlocation.setAdapter(adapter);
+        bus_endlocation.setThreshold(1);
+
 
         search = (Button)view.findViewById(R.id.search);
 

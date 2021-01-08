@@ -14,13 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.City_bus">
+        <activity android:name=".admin.AdminSideNavigation.BottomNav"></activity>
         <activity android:name=".FatchData.FatchSearchResultActivity" />
-        <activity android:name=".startup.GetStarted"
-            android:theme="@style/Theme.City_bus.NoActionBar"
-            />
-        <activity android:name=".startup.ViewPagerScreen"
-            android:theme="@style/Theme.City_bus.NoActionBar"
-            />
+        <activity
+            android:name=".startup.GetStarted"
+            android:theme="@style/Theme.City_bus.NoActionBar" />
+        <activity
+            android:name=".startup.ViewPagerScreen"
+            android:theme="@style/Theme.City_bus.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -39,9 +40,9 @@
         <activity
             android:name=".FatchData.FatchPlacesActivity"
             android:label="Locations" />
-        <activity android:name=".FatchData.FatchBusDataActivity"
-            android:label="Buses"
-            />
+        <activity
+            android:name=".FatchData.FatchBusDataActivity"
+            android:label="Buses" />
         <activity
             android:name=".admin.AdminSideNavigation.AdminSideNavigationActivity"
             android:label="Admin Screen"
@@ -55,22 +56,7 @@
         <activity
             android:name=".user.UserSideNavigation.UserSideNavigationActivity"
             android:label="City Bus"
-            android:theme="@style/Theme.City_bus.NoActionBar" >
-
-
-        </activity>
-        <activity android:name=".login.PasswordSuccessfullySetActivity" />
-        <activity android:name=".login.ResetPasswordActivity" />
-        <activity android:name=".login.ForgetPasswordActivity" />
-        <activity android:name=".login.SignupActivity"
-            android:label="Sign Up"
-            >
-
-        </activity>
-        <activity
-            android:name=".startup.Splash_Screen"
             android:theme="@style/Theme.City_bus.NoActionBar">
-
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,8 +64,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-
         </activity>
+        <activity android:name=".login.PasswordSuccessfullySetActivity" />
+        <activity android:name=".login.ResetPasswordActivity" />
+        <activity android:name=".login.ForgetPasswordActivity" />
+        <activity
+            android:name=".login.SignupActivity"
+            android:label="Sign Up"></activity>
+        <activity
+            android:name=".startup.Splash_Screen"
+            android:theme="@style/Theme.City_bus.NoActionBar"></activity>
         <activity android:name=".MainActivity" />
     </application>
 

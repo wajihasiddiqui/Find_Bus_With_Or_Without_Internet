@@ -56,8 +56,14 @@ public class SignupActivity extends AppCompatActivity {
         });
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+                if(!validatename() | !validateemail() | !validatepassword()){
+                    return;
+                }
+
                 auth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
@@ -79,4 +85,67 @@ public class SignupActivity extends AppCompatActivity {
         });
 
     }
+
+
+    private boolean validatename(){
+
+        String val = name.getText().toString().trim();
+        String checkspaces = "\\A\\w{1,20}\\z";
+
+        if(val.isEmpty()){
+            name.setError("Field Can not be empty");
+            return  false;
+        }
+        else if(val.length() > 20 ){
+            name.setError("Password Is Too Large!");
+
+            return  false;
+        }
+        else if(!val.matches(checkspaces)){
+            name.setError("No White Space Are Allowed!");
+
+            return  false;
+        }
+        else{
+            name.setError(null);
+           // name.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    private boolean validateemail(){
+
+        String val = email.getText().toString().trim();
+        String checkemail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        if(val.isEmpty()){
+            email.setError("Field Can not be empty");
+            return  false;
+        }
+        else if(!val.matches(checkemail)){
+            email.setError("Invalid Email!");
+            return  false;
+        }
+        else{
+            email.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validatepassword(){
+
+        String val = password.getText().toString().trim();
+
+
+        if(val.isEmpty()){
+            password.setError("Field Can not be empty");
+            return  false;
+        }
+        else{
+            password.setError(null);
+            return true;
+        }
+    }
+
+
 }

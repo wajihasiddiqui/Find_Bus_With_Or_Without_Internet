@@ -18,7 +18,7 @@
     </ImageView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="251dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/bangersregular"
@@ -28,51 +28,36 @@
 
     </TextView>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/start_location"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_marginTop="30dp"
-        android:hint="FROM"
-        app:startIconDrawable="@drawable/ic_baseline_my_location_24"
-        app:startIconTint="#C4CDC1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:hint="     FROM"
+        android:drawableStart="@drawable/ic_baseline_my_location_24"
+        android:drawableTint="#C4CDC1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:paddingStart="15dp"
+        android:background="@drawable/border"
+        android:textColorHint="#C4CDC1"
+        android:textColor="#C4CDC1"
+        >
+    </com.google.android.material.textfield.MaterialAutoCompleteTextView>
 
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/start_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-<!--    <AutoCompleteTextView-->
-<!--        android:id="@+id/autocomplete"-->
-<!--        android:layout_width="330dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="FROM"-->
-<!--        >-->
-<!--    </AutoCompleteTextView>-->
-
-    <com.google.android.material.textfield.TextInputLayout
-
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/end_location"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_marginTop="30dp"
-        android:hint="TO"
-        app:startIconDrawable="@drawable/ic_baseline_location_on_24"
-        app:startIconTint="#C4CDC1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/end_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:hint="     TO"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:drawableTint="#C4CDC1"
+        android:paddingStart="15dp"
+        android:textColorHint="#C4CDC1"
+        android:textColor="#C4CDC1"
+        android:background="@drawable/border"
+        >
+    </com.google.android.material.textfield.MaterialAutoCompleteTextView>
 
 
     <Button

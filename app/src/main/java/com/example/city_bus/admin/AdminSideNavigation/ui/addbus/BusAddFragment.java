@@ -66,8 +66,6 @@ public class BusAddFragment extends Fragment implements AdapterView.OnItemSelect
 
                     Toast.makeText(getActivity(), "Data Inserted", Toast.LENGTH_SHORT).show();
 
-
-
                 }
 
                 else{

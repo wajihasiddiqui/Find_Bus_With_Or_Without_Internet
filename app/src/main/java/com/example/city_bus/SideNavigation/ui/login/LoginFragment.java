@@ -1,16 +1,22 @@
 package com.example.city_bus.SideNavigation.ui.login;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,13 +25,19 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.city_bus.R;
+import com.example.city_bus.SideNavigation.SideNavigationActivity;
 import com.example.city_bus.SideNavigation.ui.home.HomeFragment;
+import com.example.city_bus.admin.AdminSideNavigation.AdminSideNavigationActivity;
 import com.example.city_bus.admin.AdminSideNavigation.ui.home.AdminHomeFragment;
 import com.example.city_bus.login.SignupActivity;
+import com.example.city_bus.startup.Splash_Screen;
+import com.example.city_bus.startup.ViewPagerScreen;
+import com.example.city_bus.user.UserSideNavigation.UserSideNavigationActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -60,11 +72,13 @@ public class LoginFragment extends Fragment {
 
 
     private static final int RC_SIGN_IN = 123;
-    EditText email, password;
+    EditText email;
+    EditText password;
     Button btn_login;
     CircularImageView lg_google;
     CheckBox rememberMe;
     Button signup;
+    RelativeLayout progressbar;
 
     FirebaseAuth auth;
     DatabaseReference myref= FirebaseDatabase.getInstance().getReference();
@@ -88,12 +102,13 @@ public class LoginFragment extends Fragment {
         View view =inflater.inflate(R.layout.fragment_login, container, false);
 
 
-        email = (EditText)view.findViewById(R.id.lg_email);
-        password = (EditText)view.findViewById(R.id.lg_password);
+        email = view.findViewById(R.id.lg_email);
+        password = view.findViewById(R.id.lg_password);
         btn_login = (Button)view.findViewById(R.id.btn_login);
         lg_google = (CircularImageView)view.findViewById(R.id.lg_google);
         rememberMe = (CheckBox)view.findViewById(R.id.rememberMe);
-//        auth = FirebaseAuth.getInstance();
+      //  progressbar = view.findViewById(R.id.progressbar);
+        auth = FirebaseAuth.getInstance();
 
         signup = (Button)view.findViewById(R.id.signup);
 
@@ -108,6 +123,15 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                if(!isConnected(getActivity())) {
+                    showCustomDialog();
+                }
+                if(!validateFields()){
+                    return;
+                }
+
+              //  progressbar.setVisibility(View.VISIBLE);
+
                 auth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
@@ -115,18 +139,18 @@ public class LoginFragment extends Fragment {
                                 Map<String,String> map=new HashMap<>();
                                 map.put("email",email.getText().toString());
                                 myref.child(authResult.getUser().getUid()).setValue(map);
-                                if(email.getText().toString() == "admin@gmail.com") {
-                                    startActivity(new Intent(getActivity(), AdminHomeFragment.class));
+                                if(email.toString()  == "admin@gmail.com") {
+                                    startActivity(new Intent(getActivity(), AdminSideNavigationActivity.class));
                                 }
                                 else {
-                                    startActivity(new Intent(getActivity(), HomeFragment.class));
+                                    startActivity(new Intent(getActivity(), SideNavigationActivity.class));
+                                    //progressbar.setVisibility(View.GONE);
                                 }
-
-
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
+                       // progressbar.setVisibility(View.GONE);
                         Toast.makeText(getActivity(), ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -154,35 +178,24 @@ public class LoginFragment extends Fragment {
 
         return view;
 
-//        SharedPreferences sharedPref = getActivity().getSharedPreferences("remember", MODE_PRIVATE);
-//        String email = sharedPref.getString("email", "");//"No name defined" is the default value.
-//        String password = sharedPref.getString("password",""); //0 is the default value.
-//
-//
+
 //        rememberMe.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 //            @Override
 //            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 //
+//
+//                SharedPreferences sharedPref = getActivity().getSharedPreferences("remember", MODE_PRIVATE);
+//                String email = sharedPref.getString("email", "");
+//                String password = sharedPref.getString("password","");
+//
 //                if(buttonView.isChecked()){
-//                    SharedPreferences sharedPref = getActivity().getSharedPreferences("remember", MODE_PRIVATE);
 //                    SharedPreferences.Editor editor = sharedPref.edit();
-//                    editor.putString("email",lg_email.getEditText().getText().toString());
-//                    editor.putString("password",lg_password.getEditText().getText().toString());
+//                    editor.putString("email",email.getEditText().getText().toString());
+//                    editor.putString("password",password.getEditText().getText().toString());
 //                    editor.putString("rememberMe","true");
 //                    editor.apply();
-//                    Toast.makeText(getActivity(), "checked", Toast.LENGTH_SHORT).show();
-//
-//
 //                }
-//                else if(!buttonView.isChecked()){
-//                    SharedPreferences sharedPref = getActivity().getSharedPreferences("remember", MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = sharedPref.edit();
-//                    editor.putString("email",lg_email.getEditText().getText().toString());
-//                    editor.putString("password",lg_password.getEditText().getText().toString());
-//                    editor.putString("rememberMe","false");
-//                    editor.apply();
-//                    Toast.makeText(getActivity(), "unchecked", Toast.LENGTH_SHORT).show();
-//
+//                else{
 //
 //                }
 //
@@ -191,6 +204,41 @@ public class LoginFragment extends Fragment {
     }
 
 
+    private boolean isConnected(FragmentActivity loginFragment) {
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) loginFragment.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo wificon = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mobcon = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if((wificon != null && wificon.isConnected()) || (mobcon != null && mobcon.isConnected())){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+
+
+    private void showCustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage("Please connect to the internet to proceed further")
+        .setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                })
+                .setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(getActivity(), UserSideNavigationActivity.class));
+
+                    }
+                });
+    }
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -238,5 +286,25 @@ public class LoginFragment extends Fragment {
 
     }
 
+
+    private boolean validateFields(){
+        String eml = email.getText().toString().trim();
+        String pass = password.getText().toString().trim();
+        if(eml.isEmpty()){
+            email.setError("Email can not be empty");
+            email.requestFocus();
+            return  false;
+        }
+        else if(pass.isEmpty()){
+            password.setError("Password can not be empty");
+            password.requestFocus();
+            return  false;
+        }
+        else{
+            password.setError(null);
+            //password.setErrorEnabled(false);
+            return true;
+        }
+    }
 
 }

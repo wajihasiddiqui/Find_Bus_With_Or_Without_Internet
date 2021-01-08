@@ -62,7 +62,7 @@ public class AdminSideNavigationActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-        updateNavHeader();
+//        updateNavHeader();
 
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
@@ -87,18 +87,18 @@ public class AdminSideNavigationActivity extends AppCompatActivity {
     }
 
 
-
-    public void updateNavHeader() {
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        View headerView= navigationView.getHeaderView(0);
-        TextView navName= headerView.findViewById(R.id.adname);
-        TextView navEmail=headerView.findViewById(R.id.ademail);
-
-        navName.setText(currentUser.getDisplayName());
-        navEmail.setText(currentUser.getEmail());
-
-
-    }
+//
+//    public void updateNavHeader() {
+//        NavigationView navigationView = findViewById(R.id.nav_view);
+//        View headerView= navigationView.getHeaderView(0);
+//        TextView navName= headerView.findViewById(R.id.adname);
+//        TextView navEmail=headerView.findViewById(R.id.ademail);
+//
+//        navName.setText(currentUser.getDisplayName());
+//        navEmail.setText(currentUser.getEmail());
+//
+//
+//    }
 
 
 }

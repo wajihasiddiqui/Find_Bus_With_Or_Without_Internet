@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav_bar"
-    app:startDestination="@+id/home">
+    app:startDestination="@+id/bthome">
 
     <fragment
-        android:id="@+id/home"
+        android:id="@+id/bthome"
         android:name="com.example.city_bus.admin.AdminSideNavigation.ui.home.AdminHomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_admin_home"/>
 
     <fragment
-        android:id="@+id/buses"
+        android:id="@+id/btbuses"
         android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addbus.BusAddFragment"
         android:label="ADD BUS"
         tools:layout="@layout/fragment_bus_add" />
 
 
     <fragment
-        android:id="@+id/place"
+        android:id="@+id/btplace"
         android:name="com.example.city_bus.admin.AdminSideNavigation.ui.addplace.AddPlaceFragment"
         android:label="Places"
         tools:layout="@layout/fragment_add_place" />

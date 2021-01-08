@@ -1,8 +1,12 @@
 package com.example.city_bus.startup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -13,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.city_bus.R;
+import com.example.city_bus.user.UserSideNavigation.UserSideNavigationActivity;
 
 public class Splash_Screen extends AppCompatActivity {
 
@@ -21,6 +26,9 @@ public class Splash_Screen extends AppCompatActivity {
 
     TextView sologan, logo;
     ImageView image;
+
+    SharedPreferences sharedPreferences;
+    Boolean firstTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +49,31 @@ public class Splash_Screen extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(Splash_Screen.this, ViewPagerScreen.class));
-            }
-        }, 3000);
+
+        sharedPreferences = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        firstTime = sharedPreferences.getBoolean("firstTime",true);
+
+        if(firstTime){
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    firstTime = false;
+                    editor.putBoolean("firstTime",firstTime);
+                    editor.apply();
+                    startActivity(new Intent(Splash_Screen.this, ViewPagerScreen.class));
+                    finish();
+                }
+            }, 3000);
+        }
+        else{
+
+            startActivity(new Intent(Splash_Screen.this, UserSideNavigationActivity.class));
+            finish();
+        }
+
+
+
     }
 }

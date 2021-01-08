@@ -19,13 +19,15 @@
 
         <item
             android:id="@+id/nav_help"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_help_24"
+            android:iconTint="@color/black"
             android:title="Help And Support"
             />
 
         <item
             android:id="@+id/nav_call"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_call_24"
+            android:iconTint="@color/black"
             android:title="Call City Bus"
             />
 
@@ -53,7 +55,8 @@
         <menu>
             <item
                 android:id="@+id/nav_login"
-                android:icon="@drawable/ic_menu_gallery"
+                android:icon="@drawable/ic_baseline_login_24"
+                android:iconTint="@color/black"
                 android:title="Login"
                 />
         </menu>

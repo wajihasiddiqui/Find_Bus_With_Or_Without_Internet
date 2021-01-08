@@ -13,22 +13,25 @@
 
                 <item
                     android:id="@+id/nav_home_admin"
-                    android:icon="@drawable/ic_menu_gallery"
+                    android:icon="@drawable/ic_home_black_24dp"
                     android:title="Home" />
                 <item
                     android:id="@+id/nav_addBus"
-                    android:icon="@drawable/ic_menu_slideshow"
+                    android:icon="@drawable/ic_baseline_directions_bus_24"
+                    android:iconTint="@color/black"
                     android:title="Add Bus" />
 
 
                 <item
                     android:id="@+id/nav_addBusStops"
-                    android:icon="@drawable/ic_menu_camera"
+                    android:icon="@drawable/ic_baseline_location_on_24"
+                    android:iconTint="@color/black"
                     android:title="Add Bus Stops" />
 
                 <item
                     android:id="@+id/nav_addPlace"
-                    android:icon="@drawable/ic_menu_camera"
+                    android:icon="@drawable/ic_baseline_location_on_24"
+                    android:iconTint="@color/black"
                     android:title="Add Place" />
 
 
@@ -56,7 +59,8 @@
                 <menu>
                     <item
                         android:id="@+id/nav_logout"
-                        android:icon="@drawable/ic_menu_gallery"
+                        android:icon="@drawable/ic_baseline_login_24"
+                        android:iconTint="@color/black"
                         android:title="Logout"
                         />
                 </menu>

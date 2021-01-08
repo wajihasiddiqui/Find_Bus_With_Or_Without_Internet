@@ -115,9 +115,7 @@
             android:id="@+id/sg_passsword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberPassword"
-            android:textColor="#99AEAD"
-            />
+            android:textColor="#99AEAD" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
