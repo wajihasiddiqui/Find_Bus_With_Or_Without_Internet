@@ -93,17 +93,18 @@
                 android:orientation="vertical">
 
             </LinearLayout>
-            <com.mikhaellopez.circularimageview.CircularImageView
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/addtb"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/ic_baseline_add_24"
 
                 >
 
-            </com.mikhaellopez.circularimageview.CircularImageView>
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
         </LinearLayout>
@@ -111,13 +112,14 @@
 
     </ScrollView>
 
-    <com.mikhaellopez.circularimageview.CircularImageView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/insert_data"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
+        android:backgroundTint="@color/white"
         android:src="@drawable/ic_baseline_check_24">
 
-    </com.mikhaellopez.circularimageview.CircularImageView>
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </LinearLayout>

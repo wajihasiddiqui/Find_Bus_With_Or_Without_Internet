@@ -31,7 +31,7 @@ public class FatchPlacesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fatch_places);
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         ArrayList list = new ArrayList();

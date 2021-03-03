@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.city_bus.R;
 import com.example.city_bus.database.BusesDatabase;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
@@ -31,7 +32,7 @@ public class AddPlaceFragment extends Fragment {
         BusDatabase = new BusesDatabase(getActivity());
 
         addplace = (EditText)view.findViewById(R.id.Place);
-        CircularImageView btnaddplace = (CircularImageView)view.findViewById(R.id.btnaddplace);
+        FloatingActionButton btnaddplace = (FloatingActionButton)view.findViewById(R.id.btnaddplace);
 
 
         btnaddplace.setOnClickListener(new View.OnClickListener() {

@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.city_bus.R;
 import com.example.city_bus.database.BusesDatabase;
 import com.example.city_bus.model.Stops;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -48,8 +49,8 @@ public class StopsAddFragment extends Fragment implements AdapterView.OnItemSele
         BusDatabase = new BusesDatabase(getActivity());
 
         LinearLayout layoutlist = (LinearLayout)view.findViewById(R.id.listlayout);
-        CircularImageView addtextbox = (CircularImageView)view.findViewById(R.id.addtb);
-        CircularImageView insertdata = (CircularImageView)view.findViewById(R.id.insert_data);
+        FloatingActionButton addtextbox = (FloatingActionButton)view.findViewById(R.id.addtb);
+        FloatingActionButton insertdata = (FloatingActionButton)view.findViewById(R.id.insert_data);
         spbusno = (Spinner)view.findViewById(R.id.busNo);
         routename = (Spinner)view.findViewById(R.id.route_name);
         stop = (TextInputLayout)view.findViewById(R.id.stop);

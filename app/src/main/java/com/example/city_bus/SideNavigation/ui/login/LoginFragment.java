@@ -130,6 +130,7 @@ public class LoginFragment extends Fragment {
                     return;
                 }
 
+
               //  progressbar.setVisibility(View.VISIBLE);
 
                 auth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
@@ -139,13 +140,16 @@ public class LoginFragment extends Fragment {
                                 Map<String,String> map=new HashMap<>();
                                 map.put("email",email.getText().toString());
                                 myref.child(authResult.getUser().getUid()).setValue(map);
-                                if(email.toString()  == "admin@gmail.com") {
+                                if(email.getText().toString().equals("admin@gmail.com")) {
                                     startActivity(new Intent(getActivity(), AdminSideNavigationActivity.class));
+                                    getActivity().finish();
+
                                 }
                                 else {
                                     startActivity(new Intent(getActivity(), SideNavigationActivity.class));
                                     //progressbar.setVisibility(View.GONE);
                                 }
+
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override

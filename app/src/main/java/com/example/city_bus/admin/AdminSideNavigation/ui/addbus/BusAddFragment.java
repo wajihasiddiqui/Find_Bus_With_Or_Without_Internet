@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.city_bus.R;
 import com.example.city_bus.database.BusesDatabase;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
@@ -44,7 +45,7 @@ public class BusAddFragment extends Fragment implements AdapterView.OnItemSelect
         bus_distance = (TextInputLayout)view.findViewById(R.id.distance);
         bus_routename = (TextInputLayout)view.findViewById(R.id.routeName);
 
-        CircularImageView addbus = (CircularImageView)view.findViewById(R.id.adddBus);
+        FloatingActionButton addbus = (FloatingActionButton)view.findViewById(R.id.adddBus);
 
         bus_startlocations.setOnItemSelectedListener(this);
         bus_endlocation.setOnItemSelectedListener(this);

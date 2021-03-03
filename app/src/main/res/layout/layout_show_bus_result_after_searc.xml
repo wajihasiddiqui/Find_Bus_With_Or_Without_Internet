@@ -44,7 +44,7 @@
                 android:text="Bus No"
                 android:gravity="center"
                 android:textColor="#28363D"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="9dp"
                 android:fontFamily="@font/bangersregular"
                 android:textSize="18dp"
                 >

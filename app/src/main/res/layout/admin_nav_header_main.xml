@@ -27,16 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="3dp"
-        android:text="@string/nav_header_title"
+        android:text="Admin"
         android:textSize="25dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-    <TextView
-        android:id="@+id/ademail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="2dp"
-        android:text="@string/nav_header_title"
-        android:textSize="13dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </LinearLayout>

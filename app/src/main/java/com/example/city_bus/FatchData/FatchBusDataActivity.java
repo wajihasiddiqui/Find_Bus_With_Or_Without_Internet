@@ -1,12 +1,14 @@
 package com.example.city_bus.FatchData;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.city_bus.R;
@@ -31,7 +33,6 @@ public class FatchBusDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fatch_bus_data);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ArrayList list = new ArrayList();
 
@@ -52,4 +53,5 @@ public class FatchBusDataActivity extends AppCompatActivity {
         recyclerview.setAdapter(adapter);
 
     }
+
 }

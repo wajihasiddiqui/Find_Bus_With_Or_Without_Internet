@@ -8,14 +8,17 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.City_bus">
-        <activity android:name=".admin.AdminSideNavigation.BottomNav"></activity>
-        <activity android:name=".FatchData.FatchSearchResultActivity" />
+        <activity android:name=".FatchData.FatchSearchResultActivity"
+            android:label="Busee"
+            />
         <activity
             android:name=".startup.GetStarted"
             android:theme="@style/Theme.City_bus.NoActionBar" />
@@ -48,6 +51,12 @@
             android:label="Admin Screen"
             android:theme="@style/Theme.City_bus.NoActionBar">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".SideNavigation.SideNavigationActivity"
@@ -58,22 +67,23 @@
             android:label="City Bus"
             android:theme="@style/Theme.City_bus.NoActionBar">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".login.PasswordSuccessfullySetActivity" />
         <activity android:name=".login.ResetPasswordActivity" />
         <activity android:name=".login.ForgetPasswordActivity" />
+
         <activity
             android:name=".login.SignupActivity"
-            android:label="Sign Up"></activity>
+            android:label="Sign Up">
+
+        </activity>
         <activity
             android:name=".startup.Splash_Screen"
-            android:theme="@style/Theme.City_bus.NoActionBar"></activity>
+            android:theme="@style/Theme.City_bus.NoActionBar">
+
+        </activity>
         <activity android:name=".MainActivity" />
     </application>
 
